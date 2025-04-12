@@ -1750,6 +1750,14 @@ local othersettings = configTab:createGroup('right', 'Other')
 
 legit:addToggle({text = "Enable",flag = "Enable Aim Assist"})
 
+ragebot:addToggle({
+    text = "Enable Rage",
+    flag = "ragebot_enabled",
+    callback = function(state)
+        Ragebot = state
+	end
+})
+
 createconfigs:addTextbox({text = "Name",flag = "config_name"})
 createconfigs:addButton({text = "Load",callback = library.loadConfig})
 
